@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alessandra Assi - Pianist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg-color: #ffffff; --text-color: #1a1a1a; --accent-color: #bfa37e; --nav-color: #555555; --title-font: 'Cinzel', serif; --body-font: 'Lato', sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg-color); color: var(--text-color); font-family: var(--body-font); font-weight: 300; line-height: 1.8; overflow-x: hidden; }
+        a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
+        header { padding: 3rem 1rem 2rem 1rem; text-align: center; background-color: #fff; }
+        h1.site-title { font-family: var(--title-font); font-size: 2.5rem; letter-spacing: 0.2rem; text-transform: uppercase; margin-bottom: 1.5rem; color: var(--text-color); font-weight: 500; }
+        nav { border-top: 1px solid #eee; border-bottom: 1px solid #eee; padding: 1rem 0; display: flex; justify-content: center; }
+        nav ul { list-style: none; display: flex; gap: 3rem; align-items: center; }
+        nav a { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15rem; color: var(--nav-color); }
+        nav a:hover, nav a.active { color: var(--accent-color); }
+        .lang-btn { border: 1px solid var(--nav-color); padding: 5px 10px; font-size: 0.7rem; transition: all 0.3s; }
+        .lang-btn:hover { background-color: var(--nav-color); color: #fff; }
+        
+        /* --- HERO IMAGE MODIFIED HERE --- */
+        .hero { 
+            width: 100%; 
+            height: 96vh; /* Increased height by 20% (80 * 1.2 = 96) */
+            background-image: url('sitting_playing2.jpeg'); 
+            background-size: cover; 
+            /* Changed from 'center' to 'center top' to show more of the top part */
+            background-position: center top; 
+        }
+
+        section { padding: 5rem 15%; text-align: center; }
+        h2 { font-family: var(--title-font); font-size: 1.8rem; text-transform: uppercase; letter-spacing: 0.15rem; margin-bottom: 3rem; color: var(--text-color); position: relative; display: inline-block; }
+        h2::after { content: ''; display: block; width: 40px; height: 1px; background-color: var(--accent-color); margin: 1rem auto 0 auto; }
+        p { margin-bottom: 1.5rem; color: #4a4a4a; }
+        
+        /* Updated Quote Styles */
+        .quote-section { background-color: #fcfcfc; padding: 5rem 20%; }
+        blockquote { font-style: italic; font-size: 1.1rem; color: #666; font-family: var(--title-font); line-height: 1.8; }
+        .quote-author { 
+            display: block; 
+            margin-top: 1.5rem; 
+            font-size: 0.8rem; 
+            font-family: var(--body-font); 
+            font-style: normal; 
+            text-transform: uppercase; 
+            letter-spacing: 0.15rem; 
+            color: var(--accent-color); 
+        }
+
+        .btn-gold { display: inline-block; margin-top: 1.5rem; padding: 0.8rem 2rem; border: 1px solid var(--accent-color); color: var(--accent-color); text-transform: uppercase; letter-spacing: 0.1rem; font-size: 0.8rem; transition: all 0.3s ease; }
+        .btn-gold:hover { background-color: var(--accent-color); color: #fff; }
+        .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; width: 100%; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; background: #000; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 2rem; }
+        .gallery img { width: 100%; height: 100%; object-fit: cover; }
+        .contact-area { background-color: #111; color: #fff; }
+        .contact-area h2 { color: #fff; }
+        .contact-area p { color: #ccc; }
+        .contact-area a { border-bottom: 1px solid var(--accent-color); }
+        footer { background-color: #000; color: #555; text-align: center; padding: 2rem; font-size: 0.7rem; letter-spacing: 0.1rem; text-transform: uppercase; }
+        @media (max-width: 768px) { h1.site-title { font-size: 1.8rem; } nav ul { flex-direction: column; gap: 1rem; } section { padding: 3rem 5%; } .video-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="site-title">Alessandra Assi</h1> 
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="biography.html">Biography</a></li>
+                <li><a href="#listen">Listen</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="index_it.html" class="lang-btn">IT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hero"></div>
+    
+    <section class="quote-section">
+        <blockquote>
+            “I consider Alessandra Assi a wonderful young musician. She is gifted with a talent full of poetry, determination, high-level intelligence and an incredible solidity. Her interpretations are always interesting and engaging.”
+            <span class="quote-author">Anna Kravtchenko</span>
+        </blockquote>
+    </section>
+
+    <section id="biography">
+        <h2>Biography</h2>
+        <p>Alessandra Assi, pianist and piano teacher trained through lifelong study under teachers of the Russian pianistic school, has performed both as a soloist and in ensembles in numerous concert halls across Italy and Switzerland. Her appearances include venues and events such as the Sporting Club of Monza, Piano City Milano, and the LAC in Lugano.</p>
+        <p>She has received numerous awards in national and international competitions, including the Andrea Baldi Competition in Bologna and the Val Tidone International Music Competition.</p>
+        <a href="biography.html" class="btn-gold">Read Full Biography</a>
+    </section>
+    <section id="listen">
+        <h2>Listen</h2>
+        <div class="video-grid">
+            <div class="video-container">
+                <iframe loading="lazy" title="Chopin Nocturne" src="https://www.youtube.com/embed/08xOvIiHfGM?feature=oembed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe loading="lazy" title="Liszt Liebestraum" src="https://www.youtube.com/embed/qghhhtUGQvE?feature=oembed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    <section id="gallery">
+        <h2>Photo Gallery</h2>
+        <div class="gallery">
+            <img src="dress_neck.jpeg" alt="Piano">
+            <img src="jumping_dress.jpeg" alt="Portrait">
+            <img src="standing_dress.jpeg" alt="Keys">
+            <img src="sitting_b&w.jpeg" alt="Keys">
+            <img src="sitting_hand.jpeg" alt="Keys">
+            <img src="sitting_look.jpeg" alt="Keys">
+            <img src="sitting_playing.jpeg" alt="Keys">
+            <img src="standing_book.jpeg" alt="Keys">
+        </div>
+    </section>
+    <section id="contact" class="contact-area">
+        <h2>Contact</h2>
+        <p>For concert inquiries and collaborations:</p>
+        <br>
+        <p><a href="mailto:alessandra.assi00@gmail.com">alessandra.assi00@gmail.com</a></p>
+    </section>
+    <footer>&copy; Credits: Massimiliano Nicol</footer>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biografia - Alessandra Assi</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { 
+            --bg-color: #ffffff; 
+            --text-color: #1a1a1a; 
+            --accent-color: #bfa37e; 
+            --nav-color: #555555; 
+            --title-font: 'Cinzel', serif; 
+            --body-font: 'Lato', sans-serif; 
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg-color); color: var(--text-color); font-family: var(--body-font); font-weight: 300; line-height: 1.8; overflow-x: hidden; }
+        a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
+        
+        /* HEADER */
+        header { padding: 3rem 1rem 2rem 1rem; text-align: center; background-color: #fff; }
+        h1.site-title { font-family: var(--title-font); font-size: 2.5rem; letter-spacing: 0.2rem; text-transform: uppercase; margin-bottom: 1.5rem; color: var(--text-color); font-weight: 500; }
+        nav { border-top: 1px solid #eee; border-bottom: 1px solid #eee; padding: 1rem 0; display: flex; justify-content: center; }
+        nav ul { list-style: none; display: flex; gap: 3rem; align-items: center; }
+        nav a { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15rem; color: var(--nav-color); }
+        nav a:hover, nav a.active { color: var(--accent-color); }
+        .lang-btn { border: 1px solid var(--nav-color); padding: 5px 10px; font-size: 0.7rem; transition: all 0.3s; }
+        .lang-btn:hover { background-color: var(--nav-color); color: #fff; }
+
+        /* BIOGRAPHY SPECIFIC STYLES */
+        section { 
+            padding: 5rem 10%; 
+            max-width: 1400px; 
+            margin: 0 auto; 
+        }
+
+        h2 { 
+            font-family: var(--title-font); 
+            font-size: 3rem; 
+            text-align: center; 
+            margin-bottom: 4rem; 
+            color: var(--text-color); 
+            display: block;
+        }
+        
+        h2::after { 
+            content: ''; 
+            display: block; 
+            width: 60px; 
+            height: 1px; 
+            background-color: var(--accent-color); 
+            margin: 1.5rem auto 0 auto; 
+        }
+
+        .bio-content {
+            column-count: 2; 
+            column-gap: 5rem; 
+        }
+
+        p { 
+            margin-bottom: 2rem; 
+            color: #4a4a4a; 
+            font-size: 1.4rem; /* Larger font */
+            line-height: 1.9; 
+            text-align: left; 
+            orphans: 3; 
+            widows: 3;
+        }
+
+        footer { background-color: #000; color: #555; text-align: center; padding: 2rem; font-size: 0.7rem; letter-spacing: 0.1rem; text-transform: uppercase; }
+        
+        @media (max-width: 900px) { 
+            .bio-content { column-count: 1; }
+            section { padding: 3rem 5%; } 
+            h2 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="site-title">Alessandra Assi</h1> 
+        <nav>
+            <ul>
+                <li><a href="index_it.html">Home</a></li>
+                <li><a href="#" class="active">Biografia</a></li>
+                <li><a href="biography.html" class="lang-btn">EN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Biografia</h2>
+        <div class="bio-content">
+            <p>Nata nel 2000 a Cantù (CO), inizia a studiare pianoforte all'Accademia G. Marziali di Seveso. Nel 2022 consegue il diploma di Bachelor of Arts in Music Performance al Conservatorio della Svizzera Italiana di Lugano, vincendo la borsa di studio come miglior studente Bachelor 2021/2022. Laureata con lode al Master in Performance, è attualmente iscritta al Master of Arts in Music Pedagogy sotto la guida di Anna Kravtchenko.</p>
+
+            <p>È stata premiata in numerosi concorsi nazionali e internazionali, fra cui il concorso Andrea Baldi di Bologna (secondo premio) e il concorso Val Tidone (primo premio assoluto). Ha frequentato corsi di perfezionamento con Vincenzo Balzani, Vsevolod Dvorkin e Irene Veneziano.</p>
+
+            <p>Si è esibita sia come solista che in ensemble in varie sale da concerto in Italia e Svizzera, tra cui lo Sporting Club di Monza, Piano City Milano, e il LAC di Lugano nell'ambito della manifestazione 900presente.</p>
+
+            <p>Da sempre è appassionata di lettura, scrittura e arti figurative, nel tempo libero si dedica alla ritrattistica e alla lettura di saggi e romanzi storici e filosofici.</p>
+        </div>
+    </section>
+
+    <footer>&copy; Crediti: Massimiliano Nicol</footer>
+</body>
+</html>
