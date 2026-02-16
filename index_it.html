@@ -21,13 +21,12 @@
         .lang-btn { border: 1px solid var(--nav-color); padding: 5px 10px; font-size: 0.7rem; transition: all 0.3s; }
         .lang-btn:hover { background-color: var(--nav-color); color: #fff; }
         
-        /* --- HERO IMAGE MODIFIED HERE --- */
         .hero { 
             width: 100%; 
-            height: 96vh; /* Increased height by 20% */
+            height: 96vh; 
             background-image: url('sitting_playing2.jpeg'); 
             background-size: cover; 
-            background-position: center top; /* Focus on top */
+            background-position: center top; 
         }
 
         section { padding: 5rem 15%; text-align: center; }
@@ -35,7 +34,6 @@
         h2::after { content: ''; display: block; width: 40px; height: 1px; background-color: var(--accent-color); margin: 1rem auto 0 auto; }
         p { margin-bottom: 1.5rem; color: #4a4a4a; }
         
-        /* Updated Quote Styles */
         .quote-section { background-color: #fcfcfc; padding: 5rem 20%; }
         blockquote { font-style: italic; font-size: 1.1rem; color: #666; font-family: var(--title-font); line-height: 1.8; }
         .quote-author { 
@@ -51,17 +49,56 @@
 
         .btn-gold { display: inline-block; margin-top: 1.5rem; padding: 0.8rem 2rem; border: 1px solid var(--accent-color); color: var(--accent-color); text-transform: uppercase; letter-spacing: 0.1rem; font-size: 0.8rem; transition: all 0.3s ease; }
         .btn-gold:hover { background-color: var(--accent-color); color: #fff; }
+        
         .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; width: 100%; }
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; background: #000; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 2rem; }
+        
+        /* --- GALLERY FIXED LAYOUT (UPDATED) --- */
+        .gallery {
+            display: grid;
+            gap: 1rem;
+            margin-top: 2rem;
+            /* DEFAULT: Mobile Phones (1 Column) */
+            grid-template-columns: 1fr;
+        }
+
+        /* TABLETS (Screens wider than 600px): 2 Columns */
+        @media (min-width: 600px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* COMPUTERS (Screens wider than 1024px): STRICTLY 4 Columns */
+        @media (min-width: 1024px) {
+            .gallery {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
         .gallery img { width: 100%; height: 100%; object-fit: cover; }
+
         .contact-area { background-color: #111; color: #fff; }
         .contact-area h2 { color: #fff; }
         .contact-area p { color: #ccc; }
         .contact-area a { border-bottom: 1px solid var(--accent-color); }
         footer { background-color: #000; color: #555; text-align: center; padding: 2rem; font-size: 0.7rem; letter-spacing: 0.1rem; text-transform: uppercase; }
-        @media (max-width: 768px) { h1.site-title { font-size: 1.8rem; } nav ul { flex-direction: column; gap: 1rem; } section { padding: 3rem 5%; } .video-grid { grid-template-columns: 1fr; } }
+        
+        /* --- MOBILE ADJUSTMENTS --- */
+        @media (max-width: 768px) { 
+            h1.site-title { font-size: 1.8rem; } 
+            nav ul { flex-direction: column; gap: 1rem; } 
+            section { padding: 3rem 5%; } 
+            .video-grid { grid-template-columns: 1fr; }
+            
+            /* Mobile Hero Fix */
+            .hero {
+                height: 50vh;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
     </style>
 </head>
 <body>
